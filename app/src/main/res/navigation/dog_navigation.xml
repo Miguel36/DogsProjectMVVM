@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/listFragment"
         android:name="com.mmontilla.dogs.view.ListFragment"
-        android:label="ListFragment" >
+        android:label="Dogs List">
         <action
             android:id="@+id/listFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
@@ -16,7 +16,7 @@
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.mmontilla.dogs.view.DetailFragment"
-        android:label="DetailFragment" >
+        android:label="Detail List">
         <action
             android:id="@+id/detailFragment_to_listFragment"
             app:destination="@id/listFragment" />
