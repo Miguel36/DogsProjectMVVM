@@ -29,6 +29,7 @@ class ListFragment : Fragment() {
 
         buttonDetails.setOnClickListener {
             val action = ListFragmentDirections.listFragmentToDetailFragment()
+            action.dogUid = 10
             Navigation.findNavController(it).navigate(action)
         }
     }

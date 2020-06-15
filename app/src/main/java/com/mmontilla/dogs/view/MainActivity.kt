@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         /**
-         * the title in the action bar will automatically be updated when
+         * The title in the action bar will automatically be updated when
          * the destination changes according to the label in navGraph
          */
         navController = Navigation.findNavController(this, R.id.fragment)
@@ -28,5 +28,9 @@ class MainActivity : AppCompatActivity() {
      */
     override fun onSupportNavigateUp(): Boolean {
         return NavigationUI.navigateUp(navController, null)
+    }
+
+    override fun onBackPressed() {
+        finish()
     }
 }
