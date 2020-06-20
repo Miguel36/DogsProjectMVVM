@@ -19,18 +19,4 @@ class ListFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_list, container, false)
     }
-
-    /**
-     * This method is called once the view has been created for make sure that elements
-     * are created before we access them
-     */
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        buttonDetails.setOnClickListener {
-            val action = ListFragmentDirections.listFragmentToDetailFragment()
-            action.dogUid = 10
-            Navigation.findNavController(it).navigate(action)
-        }
-    }
 }
