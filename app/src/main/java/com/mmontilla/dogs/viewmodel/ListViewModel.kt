@@ -8,7 +8,7 @@ class ListViewModel: ViewModel() {
 
     val dogs = MutableLiveData<List<DogBreed>>()
     val dogsLoadError = MutableLiveData<Boolean>()
-    val loading =MutableLiveData<Boolean>()
+    val loading = MutableLiveData<Boolean>()
 
     fun refresh() {
         val dog1 = DogBreed("1", "Corgi", "15 years", "breedGroup", "breedFor", "temperament", "")
