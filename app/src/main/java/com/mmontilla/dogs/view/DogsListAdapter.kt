@@ -3,6 +3,7 @@ package com.mmontilla.dogs.view
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.mmontilla.dogs.R
 import com.mmontilla.dogs.model.DogBreed
@@ -29,6 +30,9 @@ class DogsListAdapter(val dogsList: ArrayList<DogBreed>): RecyclerView.Adapter<D
     override fun onBindViewHolder(holder: DogViewHolder, position: Int) {
         holder.view.name.text = dogsList[position].dogBreed
         holder.view.lifespan.text = dogsList[position].lifeSpan
+        holder.view.setOnClickListener {
+            Navigation.findNavController(it).navigate(ListFragmentDirections.listFragmentToDetailFragment())
+        }
     }
 
     class DogViewHolder(var view: View): RecyclerView.ViewHolder(view)

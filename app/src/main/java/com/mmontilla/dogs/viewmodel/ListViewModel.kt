@@ -14,7 +14,7 @@ class ListViewModel: ViewModel() {
         val dog1 = DogBreed("1", "Corgi", "15 years", "breedGroup", "breedFor", "temperament", "")
         val dog2 = DogBreed("2", "labrador", "10 years", "breedGroup", "breedFor", "temperament", "")
         val dog3 = DogBreed("3", "Rotwailer", "20 years", "breedGroup", "breedFor", "temperament", "")
-        val dogList = arrayListOf<DogBreed>(dog1, dog2, dog3)
+        val dogList = arrayListOf(dog1, dog2, dog3)
 
         dogs.value = dogList
         dogsLoadError.value = false
